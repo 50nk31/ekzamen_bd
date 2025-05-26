@@ -66,7 +66,7 @@
 
 
 
-# Код всей бд
+# Код всей бд, а так-же ERD-диаграмма и результаты выполнения запросов
 ## Таблицы
 table room_statuses
 ```sql
@@ -353,6 +353,18 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 ```
+![ERD-диаграмма](https://i.imgur.com/AMl6zOV.jpeg)
 
 
+**Комнаты с наибольшим количеством отказов**
+![Отказы](https://i.imgur.com/PcwVCdi.jpeg)
+
+**Комнаты с пересекающимися бронированиями**
+![Бронь](https://i.imgur.com/AIuRjh3.jpeg)
+
+**Пользователи с наибольшим числом действий**
+![Действия](https://i.imgur.com/5sfwLOg.jpeg)
+
+**Свободные комнаты в ближайшие 2 часа**
+![Комнаты](https://i.imgur.com/CMKsIR0.jpeg)
 
