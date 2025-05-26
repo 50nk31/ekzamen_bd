@@ -1,1 +1,0 @@
-# ekzamen_bd
