@@ -353,6 +353,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 ```
+**ERD-диаграмма**
 ![ERD-диаграмма](https://i.imgur.com/AMl6zOV.jpeg)
 
 
