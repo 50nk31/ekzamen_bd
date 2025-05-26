@@ -66,8 +66,8 @@
 
 
 
-# Код всей бд и запросов
-## Tables
+# Код всей бд
+## Таблицы
 table room_statuses
 ```sql
 CREATE TABLE room_statuses (
@@ -149,7 +149,7 @@ log_id SERIAL PRIMARY KEY,
 );
 ```
 
-## Indexes
+## Индексы
 ```sql
 CREATE INDEX idx_bookings_room_id ON bookings(room_id);
 
@@ -160,7 +160,7 @@ CREATE INDEX idx_bookings_status_id ON bookings(status_id);
 CREATE INDEX idx_action_logs_user_id ON action_logs(user_id);
 ```
 
-## Start data
+## Тест дата
 ```sql
 INSERT INTO room_statuses (status_name)
 VALUES ('free'), ('booked'), ('under_maintance');
@@ -172,7 +172,7 @@ INSERT INTO roles(role_name)
 VALUES ('user'), ('admin'), ('auditor');
 ```
 
-## Create users and grants
+## Создание пользователей и назначение прав
 
 ```sql
 CREATE ROLE sky_user;
@@ -188,7 +188,7 @@ GRANT ALL ON ALL TABLES IN SCHEMA public TO sky_admin;
 
 ```
 
-## Creating views
+## Создание представлений
 
 ```sql
 CREATE VIEW active_bookings AS
@@ -240,7 +240,7 @@ JOIN booking_statuses bs ON b.status_id = bs.status_id
 GROUP BY t.company_name, bs.status_name;
 ```
 
-## Creating functions
+## Создание процедур, триггеров, функций
 
 booking function
 ```sql
